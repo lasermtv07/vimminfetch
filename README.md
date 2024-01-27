@@ -1,4 +1,4 @@
-# vi-info-fetch
+# vimminfetch
 A fetching program info for vim/nvim
 ## docs
 You can **change the logo and text** by cahnging the `logo_vim`, `logo_nvim` and `text` variables respectively.
