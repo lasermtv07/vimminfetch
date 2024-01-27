@@ -5,7 +5,7 @@
 "
 
 function! Fetch()
-redir => colors | silent colorsche:me | redir END
+redir => colors | silent colorscheme | redir END
 "config
 
 let logo_vim=["      |     ","  }}}|||}}}  ","  }}||||}}   "," |}}|||}}|   ","  }}|}}|     ","  }}}|       "]
@@ -14,9 +14,11 @@ let text=["  vimfetch", "  --------","  > Version: ".v:progname." ".v:version," 
 
 
 syntax on
-
-new
-normal VggGd
+    split
+    noswapfile hide enew
+    setlocal buftype=nofile
+    setlocal bufhidden=hide
+    file scratch
 let g:terminal_ansi_colors = 5
 
 if v:progname=="vim"
@@ -88,3 +90,4 @@ highlight link bls bl
 endfunction
 
 command! VimFetch :call Fetch() 
+command! VimminFetch :call Fetch() 
